@@ -1,18 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+:root {
+  --font-body: "Montserrat", Helvetica, sans-serif;
+  --font-headline: "Ubuntu", "Montserrat", sans-serif;
+  /* colors */
+  --primary-color: #00008b;
+  --secondary-color: #add8e6;
+  --tertiary-color: #00ff00;
+  --yellow: #ffff00;
+  --orange: #ffa500;
 
+  /* sizes */
+  --font-base: 18px;
+  --small-font: 0.8em;
+  --large-font: 1.2em;
+}
 body {
-  background: url("https://source.unsplash.com/random");
+  background: url(../public/images/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   height: 100vh;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-headline);
 }
 
 .container {
@@ -54,7 +66,37 @@ body {
   font-size: 12px;
   font-weight: 700;
 }
+.search {
+  text-align: center;
+  margin-top: -1em; 
+}
 
+#search-input {
+  width: 400px;
+  padding: 10px;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 0 5px var(--orange);
+  border-radius: 4px;
+  outline: 2px solid var(--secondary-color);
+  font-size: var(--font-base);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#search-submit-btn {
+  background-color: #4444a5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: var(--font-body);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#search-submit-btn:hover {
+  background-color: var(--primary-color);
+}
 .current-info .others {
   display: flex;
   flex-direction: column;
@@ -71,7 +113,7 @@ body {
 }
 
 .future-forecast {
-  background: rgba(24, 24, 27, 0.8);
+  background: rgb(0, 0, 139, .4);
   padding: 25px;
   position: fixed;
   bottom: 0;
@@ -103,7 +145,7 @@ body {
 }
 
 .future-forecast .today .temp {
-  font-size: 18px;
+  font-size: var(--font-base);
   padding-top: 15px;
 }
 
@@ -132,7 +174,7 @@ body {
 
 .weather-forecast .weather-forecast-item .temp {
   font-weight: 100;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 730px) {
