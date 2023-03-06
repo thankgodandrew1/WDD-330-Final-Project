@@ -85,12 +85,12 @@ export class UserSearchWeather {
           `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${this.API_KEY}`
         )
           .then((res) => res.json())
-          .then((data) => {
+          .then((dData) => {
             // console.log(data)
-            this.showWeatherData(data, searchTerm);
+            this.showWeatherData(dData, searchTerm);
           });
       })
-      .catch((err) => console.log(err));
+      // .catch((err) => console.log(err));
   }
 
   showWeatherData(data) {
