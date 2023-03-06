@@ -4,26 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/location-weather.js" type="module"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>Weather App</title>
   </head>
-  <body>
+  <body></body>
     <div class="container">
       <div class="current-info">
         <div class="date-container">
           <div class="time" id="time">12:30 <span id="am-pm">PM</span></div>
-          <div class="date" id="date">Monday, 25 May</div>
+          <div class="date" id="date">Sunday, 25 March</div>
 
           <div class="others" id="current-weather-items"></div>
         </div>
 
         <div class="place-container">
-          <div class="time-zone" id="time-zone">Asia/Kolkata</div>
-          <div id="country" class="country">IN</div>
+          <div class="time-zone" id="time-zone">Africa/Lagos</div>
+          <div id="country" class="country">COORD</div>
         </div>
       </div>
     </div>
-
+    <div class="search">
+      <form>
+        <input
+          type="text"
+          name="city-search"
+          id="search-input"
+          placeholder="Search Weather for a Specific Location"
+        />
+        <button type="submit" id="search-submit-btn">Search</button>
+      </form>
+    </div>
     <div class="future-forecast">
       <div class="today" id="current-temp">
         <img
@@ -33,8 +53,8 @@
         />
         <div class="other">
           <div class="day">Monday</div>
-          <div class="temp">Night - 25.6&#176; C</div>
-          <div class="temp">Day - 35.6&#176; C</div>
+          <div class="temp">Night - 25.6&#176; F</div>
+          <div class="temp">Day - 35.6&#176; F</div>
         </div>
       </div>
 
@@ -46,8 +66,8 @@
             alt="weather icon"
             class="w-icon"
           />
-          <div class="temp">Night - 25.6&#176; C</div>
-          <div class="temp">Day - 35.6&#176; C</div>
+          <div class="temp">Night - 25.6&#176; F</div>
+          <div class="temp">Day - 35.6&#176; F</div>
         </div>
         <div class="weather-forecast-item">
           <div class="day">Wed</div>
@@ -56,8 +76,8 @@
             alt="weather icon"
             class="w-icon"
           />
-          <div class="temp">Night - 25.6&#176; C</div>
-          <div class="temp">Day - 35.6&#176; C</div>
+          <div class="temp">Night - 25.6&#176; F</div>
+          <div class="temp">Day - 35.6&#176; F</div>
         </div>
         <div class="weather-forecast-item">
           <div class="day">Thur</div>
@@ -66,8 +86,8 @@
             alt="weather icon"
             class="w-icon"
           />
-          <div class="temp">Night - 25.6&#176; C</div>
-          <div class="temp">Day - 35.6&#176; C</div>
+          <div class="temp">Night - 25.6&#176; F</div>
+          <div class="temp">Day - 35.6&#176; F</div>
         </div>
         <div class="weather-forecast-item">
           <div class="day">Fri</div>
@@ -76,8 +96,8 @@
             alt="weather icon"
             class="w-icon"
           />
-          <div class="temp">Night - 25.6&#176; C</div>
-          <div class="temp">Day - 35.6&#176; C</div>
+          <div class="temp">Night - 25.6&#176; F</div>
+          <div class="temp">Day - 35.6&#176; F</div>
         </div>
         <div class="weather-forecast-item">
           <div class="day">Sat</div>
@@ -86,19 +106,9 @@
             alt="weather icon"
             class="w-icon"
           />
-          <div class="temp">Night - 25.6&#176; C</div>
-          <div class="temp">Day - 35.6&#176; C</div>
+          <div class="temp">Night - 25.6&#176; F</div>
+          <div class="temp">Day - 35.6&#176; F</div>
         </div>
       </div>
     </div>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="js/script.js" type="module"></script>
-  </body>
-</html>
+ipt>
