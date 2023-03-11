@@ -156,7 +156,29 @@ export class UserSearchWeather {
                 `;
         }
     });
+     // Add Facebook and Twitter share buttons
+     const span = document.createElement('span');
+     span.id = 'share-span';
+     span.textContent = 'Share Weather Data!'
+     const facebookBtn = document.createElement('a');
+     facebookBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&t=${encodeURIComponent(document.title)}`;
+     facebookBtn.setAttribute('target', '_blank')
+     facebookBtn.id = 'facebook-share-btn';
+     facebookBtn.innerHTML = '<i class="fab fa-facebook-square"></i>';
 
+     const twitterBtn = document.createElement('a');
+     twitterBtn.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(document.title)}`;
+     twitterBtn.setAttribute('target', '_blank')
+     twitterBtn.id = 'twitter-share-btn';
+     twitterBtn.innerHTML = '<i class="fab fa-twitter-square"></i>';
+
+     const shareBtnsContainer = document.createElement('div');
+     shareBtnsContainer.id = 'share-buttons';
+     shareBtnsContainer.appendChild(span)
+     shareBtnsContainer.appendChild(facebookBtn);
+     shareBtnsContainer.appendChild(twitterBtn);
+
+     this.currentWeatherItemsEl.appendChild(shareBtnsContainer);
     this.weatherForecastEl.innerHTML = otherDayForcast;
     }
   }
