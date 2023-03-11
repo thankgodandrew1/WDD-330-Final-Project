@@ -26,7 +26,232 @@ body {
   height: 100vh;
   font-family: var(--font-headline);
 }
+.navbar{
+  width: 100%;
+  position: static;
 
+  z-index: 1;
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.navbar ul li {
+  display: inline-block;
+  /* line-height: 10px; */
+}
+.navbar .toggle{
+  text-align: center;
+  /* background: none; */
+  top: 0;
+  left: 0; 
+  transition: none;
+  margin-right: 4em;
+  /* display: block;         */
+}
+#hamburgerBtn{
+  display: none;
+}
+.navbar .toggle li a {
+  font-size: 17px;
+  padding: 2px 13px;
+  line-height: 30px;
+  border-radius: 3px; 
+  display: inline-block;
+  background-color: rgb(0, 0, 139, .4);
+  /* background: var(--primary-color); */
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+} 
+.navbar .toggle li a:hover{
+  background: linear-gradient(to right, #00008b, #add8e6);
+  color: black;
+  transition: all 2s;
+  font-weight: bold;
+}  
+.signUp{
+  padding: 2px 13px;
+  font-size: 17px;
+  color: white;
+  line-height: 30px;
+  border-radius: 10px;
+  /* background: transparent; */
+  background-color: rgb(255, 165, 0, .3);
+  font-weight: bold;
+  outline: none;
+}
+.navbar .signUp:hover{
+  background: linear-gradient(to left, rgb(255, 165, 0, .3), rgb(255, 165, 0, .7));
+  color: black;
+  transition: ease-in-out 1s;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  font-weight: bolder;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* Starts newsletter signup styles */
+.prevent-bot {
+  position: absolute;
+  left: -5000px;
+}
+.response {
+  display: none;
+}
+#mc_embed_signup {
+  background: linear-gradient(to right, rgb(0, 0, 139, .4), #add8e6);
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 0 15px;
+}
+
+#mc_embed_signup h2 {
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  text-align: center;
+  /* padding: 10px; */
+  text-transform: uppercase;
+}
+
+#mc_embed_signup label {
+  display: block;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#mc_embed_signup input[type="text"],
+#mc_embed_signup input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+#mc_embed_signup input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+#mc_embed_signup input[type="submit"]:hover {
+  background-color: darkgray;
+  color: #333;
+}
+
+#mc_embed_signup .brandingLogo img {
+  max-width: 120px;
+  height: auto;
+  margin-top: 10px;
+}
+#mc_embed_signup .indicates-required {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  font-weight: bold;
+}
+#mc_embed_signup .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* rain animation */
+.raindrop {
+  position: absolute;
+  background-color: #03a9f4;
+  animation-name: raindrop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes raindrop {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1500px);
+  }
+}
+/* Snow flakes animation */
+.snowflake {
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  width: 0;
+  height: 0;
+  color: #00008b;
+  font-size: 3rem;
+  background-color: #fff;
+  animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100vh);
+  }
+}
+#share-buttons{
+   display: flex;
+   gap: 5px;
+   margin: 5px;
+   font-weight: bold;
+}
+#facebook-share-btn, #twitter-share-btn{
+  color: var(--yellow);
+}
+#facebook-share-btn:hover, #twitter-share-btn:hover{
+  color: var(--orange);
+}
+/* Newsletter signup styling ends */
 .container {
   padding: 20px 70px;
   color: #fff;
@@ -68,7 +293,7 @@ body {
 }
 .search {
   text-align: center;
-  margin-top: -1em; 
+  margin-top: -5em; 
 }
 
 #search-input {
@@ -93,7 +318,9 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
+#search-submit-btn::before{
+  content: 'Search';
+}
 #search-submit-btn:hover {
   background-color: var(--primary-color);
 }
@@ -167,7 +394,7 @@ body {
 
 .weather-forecast .weather-forecast-item .day {
   padding: 5px 15px;
-  background: #3c3c44;
+  background: #3d3d42;
   border-radius: 50px;
   text-align: center;
 }
@@ -178,6 +405,47 @@ body {
 }
 
 @media only screen and (max-width: 730px) {
+ body{
+   height: 150vh;
+ }
+ .navbar
+ .navbar ul li{
+  display: block;
+ }
+ .navbar .toggle li a{
+  display: block;
+  text-align: center;
+  color: var(--accent3-color);
+  font-size: 20px;
+  text-transform: uppercase;
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  background-color: var(--primary-color);
+}
+#hamburgerBtn{ 
+  display: block;
+  background: transparent;
+  font-size: 30px;
+  color: white;
+  border: none;
+  line-height: 80px;
+  margin-right: 40px;
+  float: right;
+  cursor: pointer;
+}
+.navbar ul{
+  display: none;
+}
+.navbar ul.open{
+  display: block;
+}
+#hamburgerBtn span:nth-child(1){
+  display: block;
+}
+#hamburgerBtn.open span:nth-child(1){
+  display: none;
+}
+
   .container {
     padding: 20px;
   }
@@ -219,6 +487,33 @@ body {
 
   .current-info .others .weather-item {
     font-size: 14px;
+  }
+  .search {
+    /* text-align: center; */
+    margin-top: .3em; 
+  }
+  
+  #search-input {
+    width: 200px;
+    padding: 5px;
+    border: 2px solid var(--secondary-color);
+    outline: 1px solid var(--secondary-color);
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 3px
+  }
+  
+  #search-submit-btn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #search-submit-btn::before{
+    content: '🔍';
+  }
+  #search-submit-btn:hover {
+    background-color: var(--primary-color);
   }
 }
 

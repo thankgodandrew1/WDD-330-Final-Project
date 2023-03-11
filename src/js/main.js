@@ -2,7 +2,7 @@
 const modal = document.getElementById('signup-modal');
 
 // Get the button that opens the modal
-const btn = document.getElementById('signup-btn');
+const btn = document.getElementById('open-modal');
 
 // Get the <span> element that closes the modal
 const span = document.getElementsByClassName('close')[0];
