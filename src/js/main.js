@@ -1,25 +1,31 @@
-// Get the modal
-const modal = document.getElementById('signup-modal');
+import { loadHeaderFooter } from './Utils.mjs';
+import CurrentLocationWeather from './CurrentLocationWeather.mjs';
+import { UserSearchWeather } from './SpecifiedLocation.mjs';
+import { Modal } from './Modal.mjs';
+import { Rain } from './Rain.mjs';
+import { Snowfall } from './Snowfall.mjs';
 
-// Get the button that opens the modal
-const btn = document.getElementById('open-modal');
 
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName('close')[0];
+document.addEventListener('DOMContentLoaded', async function() {
+  await loadHeaderFooter();
+  const myCurrentlocationWeather = new CurrentLocationWeather();
+  const searchResult = new UserSearchWeather();
+  new Modal();
+  const rain = new Rain('modal-content');
+  const snowfall = new Snowfall('body', 15);
+  snowfall.createSnowflakes();
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = 'block';
-}
+  myCurrentlocationWeather.start();
+  searchResult.start();
+  rain.createRain();
+});
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = 'none';
-}
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
-  }
-}
+
+
+// function toggleMenu() {
+//   document.querySelector('.toggle').classList.toggle('open')
+//   // document.getElementById('hamburgerBtn').classList.toggle('open')
+// }
+// const x = document.getElementById('hamburgerBtn')
+// x.onclick = toggleMenu;

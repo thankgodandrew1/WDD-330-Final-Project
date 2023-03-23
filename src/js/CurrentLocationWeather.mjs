@@ -62,7 +62,7 @@ export default class CurrentLocationWeather {
       let { latitude, longitude } = success.coords;
 
       fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=imperial&appid=${this.API_KEY}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${this.API_KEY}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -115,8 +115,8 @@ showWeatherData(data) {
                     <div class="day">${window
                     .moment(day.dt * 1000)
                     .format('dddd')}</div>
-                    <div class="temp">Night - ${day.temp.night}&#176;F</div>
-                    <div class="temp">Day - ${day.temp.day}&#176;F</div>
+                    <div class="temp">Night - ${day.temp.night}&#176;C</div>
+                    <div class="temp">Day - ${day.temp.day}&#176;C</div>
                 </div>
                 
                 `;
@@ -129,8 +129,8 @@ showWeatherData(data) {
                     <img src="http://openweathermap.org/img/wn/${
                     day.weather[0].icon
                     }@2x.png" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - ${day.temp.night}&#176;F</div>
-                    <div class="temp">Day - ${day.temp.day}&#176;F</div>
+                    <div class="temp">Night - ${day.temp.night}&#176;C</div>
+                    <div class="temp">Day - ${day.temp.day}&#176;C</div>
                 </div>
                 
                 `;

@@ -22,9 +22,12 @@ body {
   background: url(../public/images/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100vh;
   font-family: var(--font-headline);
+}
+.map-h1{
+  color: #add8e6;
 }
 .navbar{
   width: 100%;
@@ -81,6 +84,7 @@ body {
   background-color: rgb(255, 165, 0, .3);
   font-weight: bold;
   outline: none;
+  cursor: pointer;
 }
 .navbar .signUp:hover{
   background: linear-gradient(to left, rgb(255, 165, 0, .3), rgb(255, 165, 0, .7));
@@ -126,6 +130,13 @@ body {
 .prevent-bot {
   position: absolute;
   left: -5000px;
+}
+#map{
+  z-index: -1;
+  margin: 3em auto;
+  height: 80vh;
+  width: 70%;
+  box-shadow: 0 0 5px #ffa500;
 }
 .response {
   display: none;
@@ -210,6 +221,7 @@ body {
   animation-iteration-count: infinite;
 }
 
+
 @keyframes raindrop {
   0% {
     transform: translateY(0px);
@@ -255,6 +267,7 @@ body {
 .container {
   padding: 20px 70px;
   color: #fff;
+   margin-top: -20px;
 }
 
 .current-info {
@@ -293,11 +306,12 @@ body {
 }
 .search {
   text-align: center;
-  margin-top: -5em; 
+  margin: 0 auto;
+  margin-top: -5.8em; 
 }
 
 #search-input {
-  width: 400px;
+  width: 370px;
   padding: 10px;
   border: 2px solid var(--secondary-color);
   box-shadow: 0 0 5px var(--orange);
@@ -328,7 +342,7 @@ body {
   display: flex;
   flex-direction: column;
   background: rgba(24, 24, 27, 0.6);
-  padding: 20px;
+  padding: 18px;
   border-radius: 10px;
   margin: 10px 0;
   border: 1px solid #eee;
@@ -341,8 +355,9 @@ body {
 
 .future-forecast {
   background: rgb(0, 0, 139, .4);
-  padding: 25px;
-  position: fixed;
+  margin-top: 20px;
+  padding: 30px;
+  /* position: fixed; */
   bottom: 0;
   display: flex;
   color: white;
@@ -358,10 +373,10 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   border-radius: 10px;
-  padding: 15px;
-  padding-right: 40px;
+  padding: 10px;
+  padding-right: 30px;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .future-forecast .today .day {
@@ -385,7 +400,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 10px;
+  margin: 10px 9px;
   border: 1px solid #eee;
   padding: 15px;
   border-radius: 10px;
@@ -402,6 +417,76 @@ body {
 .weather-forecast .weather-forecast-item .temp {
   font-weight: 100;
   font-size: 14px;
+}
+.weather-header{
+  margin: 20px;
+}
+.weather-h1{
+  color: white;
+  margin: auto;
+  padding-top: 30px;
+  border-bottom: 2px solid wheat;
+  width: fit-content;
+}
+/* Style for the footer container */
+footer {
+  background: linear-gradient(to right, #7bc0e0, #888);
+  padding: 50px 0;
+  font-weight: bold;
+}
+
+/* Style for the headings in the footer */
+footer h4 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for the contact information in the footer */
+footer p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Style for the links in the footer */
+footer ul li a {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+/* Style for the social icons in the footer */
+footer .social {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  padding: 0 0 20px 0;
+}
+
+footer .social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer .social li a {
+  color: #666;
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+footer .social li a:hover {
+  color: #333;
+}
+
+/* Style for the copyright text in the footer */
+footer p.text-center {
+  color: #666;
+  font-size: 14px;
+  margin-top: 30px;
 }
 
 @media only screen and (max-width: 730px) {

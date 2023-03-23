@@ -71,7 +71,7 @@ export class UserSearchWeather {
 
   getWeatherData(searchTerm) {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&units=imperial&appid=${this.API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&units=metric&appid=${this.API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -82,7 +82,7 @@ export class UserSearchWeather {
         const { coord } = data;
         const { lat, lon } = coord;
         fetch(
-          `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=imperial&appid=${this.API_KEY}`
+          `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=metric&appid=${this.API_KEY}`
         )
           .then((res) => res.json())
           .then((dData) => {
@@ -135,8 +135,8 @@ export class UserSearchWeather {
                     <div class="day">${window
                         .moment(day.dt * 1000)
                         .format('dddd')}</div>
-                    <div class="temp">Night - ${day.temp.night}&#176;F</div>
-                    <div class="temp">Day - ${day.temp.day}&#176;F</div>
+                    <div class="temp">Night - ${day.temp.night}&#176;C</div>
+                    <div class="temp">Day - ${day.temp.day}&#176;C</div>
                 </div>
                 
                 `;
@@ -149,8 +149,8 @@ export class UserSearchWeather {
                     <img src="http://openweathermap.org/img/wn/${
                         day.weather[0].icon
                     }@2x.png" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - ${day.temp.night}&#176;F</div>
-                    <div class="temp">Day - ${day.temp.day}&#176;F</div>
+                    <div class="temp">Night - ${day.temp.night}&#176;C</div>
+                    <div class="temp">Day - ${day.temp.day}&#176;C</div>
                 </div>
                 
                 `;

@@ -1,0 +1,28 @@
+<!-- // HTML
+<div>
+  <label for="temp">Temperature (in Celsius):</label>
+  <input type="number" id="temp" name="temp">
+  <br>
+  <label for="wind">Wind Speed (in km/h):</label>
+  <input type="number" id="wind" name="wind">
+  <br>
+  <button id="calculate-wind-chill">Calculate Wind Chill</button>
+  <p id="wind-chill-result"></p>
+</div>
+
+// JavaScript
+const calculateWindChill = (temperature, windSpeed) => {
+  const windChill = 13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
+  return windChill.toFixed(2);
+}
+
+const calculateWindChillButton = document.getElementById('calculate-wind-chill');
+calculateWindChillButton.addEventListener('click', () => {
+  const temperatureInput = document.getElementById('temp');
+  const windSpeedInput = document.getElementById('wind');
+  const temperature = temperatureInput.value;
+  const windSpeed = windSpeedInput.value;
+  const windChillResult = document.getElementById('wind-chill-result');
+  const windChill = calculateWindChill(temperature, windSpeed);
+  windChillResult.textContent = `The wind chill is ${windChill}°C.`;
+}); -->

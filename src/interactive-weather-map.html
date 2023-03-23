@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <link
+     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu:wght@300&display=swap"
+     rel="stylesheet"
+   />
+   <link rel="stylesheet" href="css/style.css" />
+   <script type="module" src="js/weather-map.js"></script>
+   <script src="https://kit.fontawesome.com/ebcf57f900.js" crossorigin="anonymous"></script>
+   <title>Weather App | Weather Map</title>
+  </head>
+  <body>
+    <header id="main-header" class="weather-header">
+    </header>
+    <main>
+      <h1 class="weather-h1">Weather Map for your Location</h1>
+      <div id="map"></div>
+    </main>
+    <footer id="main-footer"></footer>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+  </body>
+</html>
+
+<!-- // HTML
+<div>
+  <label for="temp">Temperature (in Celsius):</label>
+  <input type="number" id="temp" name="temp">
+  <br>
+  <label for="wind">Wind Speed (in km/h):</label>
+  <input type="number" id="wind" name="wind">
+  <br>
+  <button id="calculate-wind-chill">Calculate Wind Chill</button>
+  <p id="wind-chill-result"></p>
+</div>
+
+// JavaScript
+const calculateWindChill = (temperature, windSpeed) => {
+  const windChill = 13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
+  return windChill.toFixed(2);
+}
+
+const calculateWindChillButton = document.getElementById('calculate-wind-chill');
+calculateWindChillButton.addEventListener('click', () => {
+  const temperatureInput = document.getElementById('temp');
+  const windSpeedInput = document.getElementById('wind');
+  const temperature = temperatureInput.value;
+  const windSpeed = windSpeedInput.value;
+  const windChillResult = document.getElementById('wind-chill-result');
+  const windChill = calculateWindChill(temperature, windSpeed);
+  windChillResult.textContent = `The wind chill is ${windChill}°C.`;
+}); -->

@@ -32,5 +32,10 @@
     "last 3 opera versions",
     "last 3 ios_saf versions",
     "last 3 safari versions"
-  ]
+  ],
+  "dependencies": {
+    "leaflet": "^1.9.3",
+    "ol": "^7.3.0",
+    "pica": "^9.0.1"
+  }
 }

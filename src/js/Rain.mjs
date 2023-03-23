@@ -1,9 +1,11 @@
 export class Rain {
     constructor(containerId) {
       this.container = document.querySelector(`#${containerId}`);
+      console.log('container', this.container);
     }
   
     createRain() {
+      console.log('createRain called');
       for (let i = 0; i < 400; i++) {
         const raindrop = document.createElement('div');
         raindrop.className = 'raindrop';

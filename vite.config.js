@@ -9,6 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
+        weatherMap: resolve(__dirname, 'src/interactive-weather-map.html'),
       },
     },
   },
