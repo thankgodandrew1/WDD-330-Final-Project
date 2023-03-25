@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'src/index.html'),
         weatherMap: resolve(__dirname, 'src/interactive-weather-map.html'),
+        windChillCalculator: resolve(__dirname, 'src/wind-chill-calculator.html'),
+        aboutUs: resolve(__dirname, 'src/about.html'),
       },
     },
   },

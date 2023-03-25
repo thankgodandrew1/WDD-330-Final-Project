@@ -40,7 +40,13 @@ export default class WeatherMap {
 
         // Add a marker with a popup showing the current weather conditions
         const weatherMarker = marker([lat, lon]).addTo(this.map);
-        weatherMarker.bindPopup(`<b>${city}</b><br><b>Temperature:</b> ${temp} &#8451;<br><b>Wind:</b> ${speed} m/s, ${deg} &deg;`);
+        if (city) {
+          weatherMarker.bindPopup(`<b>${city}</b><br><b>Temperature:</b> ${temp} &#8451;<br><b>Wind:</b> ${speed} m/s, ${deg} &deg;`);
+        } else {
+          // If the city parameter is not provided, use the name of the location returned by the API
+          const locationName = data.name;
+          weatherMarker.bindPopup(`<b>${locationName}</b><br><b>Temperature:</b> ${temp} &#8451;<br><b>Wind:</b> ${speed} m/s, ${deg} &deg;`).openPopup();
+        }
       })
       .catch(error => {
         console.error(`Failed to fetch weather data for ${city}:`, error);

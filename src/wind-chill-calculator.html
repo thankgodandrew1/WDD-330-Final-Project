@@ -1,28 +1,35 @@
-<!-- // HTML
-<div>
-  <label for="temp">Temperature (in Celsius):</label>
-  <input type="number" id="temp" name="temp">
-  <br>
-  <label for="wind">Wind Speed (in km/h):</label>
-  <input type="number" id="wind" name="wind">
-  <br>
-  <button id="calculate-wind-chill">Calculate Wind Chill</button>
-  <p id="wind-chill-result"></p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+   >
+   <link rel="stylesheet" href="css/style.css">
+   <script src="js/wind-chill.js" type="module"></script>
+   <script src="https://kit.fontawesome.com/ebcf57f900.js" crossorigin="anonymous"></script>
+   <title>WeatherSite | Wind Chill Calculator</title>
 
-// JavaScript
-const calculateWindChill = (temperature, windSpeed) => {
-  const windChill = 13.12 + (0.6215 * temperature) - (11.37 * Math.pow(windSpeed, 0.16)) + (0.3965 * temperature * Math.pow(windSpeed, 0.16));
-  return windChill.toFixed(2);
-}
-
-const calculateWindChillButton = document.getElementById('calculate-wind-chill');
-calculateWindChillButton.addEventListener('click', () => {
-  const temperatureInput = document.getElementById('temp');
-  const windSpeedInput = document.getElementById('wind');
-  const temperature = temperatureInput.value;
-  const windSpeed = windSpeedInput.value;
-  const windChillResult = document.getElementById('wind-chill-result');
-  const windChill = calculateWindChill(temperature, windSpeed);
-  windChillResult.textContent = `The wind chill is ${windChill}°C.`;
-}); -->
+</head>
+  <body class="wind-chill-body">
+    <header id="main-header" class="weather-header"></header>
+    <main> 
+      <h1 class="wind-chill-h1">Wind Chill Calculator</h1>
+      <div class="wind-chill-calc-div">
+        <label>Temperature (in Celsius): <input type="number" id="temp" name="temp"></label>
+        <br>
+        <label>Wind Speed (in km/h):  <input type="number" id="wind" name="wind"></label>
+        <br>
+        <button id="calculate-wind-chill">Calculate Wind Chill</button>
+        <p id="wind-chill-result"></p>
+      </div>
+    </main>    
+    <footer id="main-footer"></footer>
+    
+  </body>
+</html>

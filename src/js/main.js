@@ -18,10 +18,15 @@ document.addEventListener('DOMContentLoaded', async function() {
   myCurrentlocationWeather.start();
   searchResult.start();
   rain.createRain();
+
+  function toggleMenu() {
+    document.querySelector('.toggle').classList.toggle('open');
+    document.getElementById('hamburgerBtn').classList.toggle('open');
+  }
+
+  const x = document.getElementById('hamburgerBtn');
+  x.onclick = toggleMenu;
 });
-
-
-
 
 // function toggleMenu() {
 //   document.querySelector('.toggle').classList.toggle('open')

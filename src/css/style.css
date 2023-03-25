@@ -18,13 +18,43 @@
   --small-font: 0.8em;
   --large-font: 1.2em;
 }
-body {
+
+#main-body {
   background: url(../public/images/bg2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* overflow: hidden; */
+  height: 120vh;
+  font-family: var(--font-headline);
+}
+#weather-body {
+  background: url(../public/images/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   font-family: var(--font-headline);
+}
+.wind-chill-body {
+  background: url(../public/images/bg4.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  /* height: 100vh; */
+  font-family: var(--font-headline);
+}
+.privacy-body{
+  background: url(../public/images/bg5.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: var(--font-headline);
+}
+#about-body {
+  font-family: var(--font-headline);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background: url(../public/images/bg3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .map-h1{
   color: #add8e6;
@@ -40,11 +70,11 @@ body {
   justify-content: center;
   flex-direction: row;
 }
-.navbar ul li {
+.navbar .large-nav li {
   display: inline-block;
   /* line-height: 10px; */
 }
-.navbar .toggle{
+.navbar .large-nav{
   text-align: center;
   /* background: none; */
   top: 0;
@@ -53,10 +83,7 @@ body {
   margin-right: 4em;
   /* display: block;         */
 }
-#hamburgerBtn{
-  display: none;
-}
-.navbar .toggle li a {
+.navbar .large-nav li a {
   font-size: 17px;
   padding: 2px 13px;
   line-height: 30px;
@@ -68,7 +95,7 @@ body {
   text-decoration: none;
   font-weight: 500;
 } 
-.navbar .toggle li a:hover{
+.navbar .large-nav li a:hover{
   background: linear-gradient(to right, #00008b, #add8e6);
   color: black;
   transition: all 2s;
@@ -94,7 +121,7 @@ body {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -132,7 +159,7 @@ body {
   left: -5000px;
 }
 #map{
-  z-index: -1;
+  z-index: 1;
   margin: 3em auto;
   height: 80vh;
   width: 70%;
@@ -221,7 +248,55 @@ body {
   animation-iteration-count: infinite;
 }
 
+/* ----------WIND CHILL CALCULATOR STYLING STARTS HER------------ */
+.wind-chill-calc-div {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
 
+.wind-chill-calc-div label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.wind-chill-calc-div input[type="number"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.wind-chill-calc-div button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wind-chill-calc-div button:hover {
+  background-color: #383880;
+}
+
+#wind-chill-result {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+/* ----------WIND CHILL CALCULATOR STYLING ENDS------------ */
 @keyframes raindrop {
   0% {
     transform: translateY(0px);
@@ -418,21 +493,91 @@ body {
   font-weight: 100;
   font-size: 14px;
 }
-.weather-header{
-  margin: 20px;
-}
-.weather-h1{
+.weather-h1, .wind-chill-h1{
   color: white;
   margin: auto;
   padding-top: 30px;
-  border-bottom: 2px solid wheat;
+  border-bottom: 2px solid whitesmoke;
   width: fit-content;
 }
+/* Styles for About page */
+#about-body main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#about-body .about {
+  background-color: rgb(255, 165, 0, .5);
+  margin: 20px;
+  padding: 30px;
+}
+#about-body h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+#about-body h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+#about-body p {
+  margin-top: 0;
+  font-size: 20px;
+  font-family: var(--font-body);
+}
+
+#about-body .contact-info {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+/* End for about us page */
+/* Privacy policy styling starts here */
+.privacy-div {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-size: 19px;
+  line-height: 1.5;
+  color: #333;
+}
+.privacy-div p{
+  font-family: var(--font-body);
+}
+.privacy-div h1, h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: var(--font-headline);
+  color: #555;
+}
+.privacy-div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.privacy-div li {
+  margin-bottom: 5px;
+}
+.privacy-div a {
+  color: #007bff;
+  text-decoration: none;
+}
+.privacy-div a:hover {
+  text-decoration: underline;
+}
+/* Privacy Poilcy Ends here */
+
 /* Style for the footer container */
 footer {
   background: linear-gradient(to right, #7bc0e0, #888);
   padding: 50px 0;
   font-weight: bold;
+  width: 100%;
 }
 
 /* Style for the headings in the footer */
@@ -457,7 +602,21 @@ footer ul li a {
   line-height: 1.5;
   text-decoration: none;
 }
-
+footer .padding{
+  padding: 10px;
+}
+footer .padding a{
+  color: #555;
+  text-decoration: none;
+  font-size: 15px;
+}
+footer .padding a:hover{
+  text-decoration: underline;
+}
+footer .padding span{
+  color: #111;
+  font-size: 20px;
+}
 /* Style for the social icons in the footer */
 footer .social {
   list-style: none;
@@ -488,49 +647,84 @@ footer p.text-center {
   font-size: 14px;
   margin-top: 30px;
 }
+.navbar .toggle, .modality{
+	z-index: 10;
+	width: 100%;
+	position: static;
+	font-family: var(--heading-font);
+	overflow: hidden;
+}
+.toggle {
+  margin: 35px auto;
+}
+.navbar .toggle li.active a{
+	background-color: var(--primary-color);
+}
 
-@media only screen and (max-width: 730px) {
+.navbar .toggle li a:hover {
+	background-color: var(--accent2-color);
+}
+.navbar .toggle li a{
+	background-color: var(--secondary-color);
+	color: var(--accent3-color);
+	border-top: 1px solid var(--accent3-color);
+}
+.navbar .toggle {
+	display: none;
+}
+.navbar a{
+	display: block;
+	padding: 0.95rem;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+.navbar a:hover {
+  background: linear-gradient(to right, #00008b, #add8e6);
+  color: black;
+  transition: all 2s;
+  font-weight: bold;
+}
+.toggle li a{
+  text-align: center;
+}
+.navbar .large-nav{
+	display: none;
+}
+
+#hamburgerBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  background: transparent;
+	font-size: 2rem;
+	border: none;
+	color: var(--secondary-color);
+}
+.navbar .toggle li{
+	display: block;
+}
+.navbar .toggle.open{
+	display: block;
+}
+#hamburgerBtn span:nth-child(1){
+	display: block;
+}
+#hamburgerBtn span:nth-child(2){
+	display: none;
+}
+#hamburgerBtn.open span:nth-child(1){
+	display: none;
+}
+#hamburgerBtn.open span:nth-child(2){
+	display: block;
+}
+@media only screen and (max-width: 768px) {
  body{
    height: 150vh;
  }
- .navbar
- .navbar ul li{
-  display: block;
- }
- .navbar .toggle li a{
-  display: block;
-  text-align: center;
-  color: var(--accent3-color);
-  font-size: 20px;
-  text-transform: uppercase;
-  border-top: 1px solid var(--primary-color);
-  border-bottom: 1px solid var(--secondary-color);
-  background-color: var(--primary-color);
-}
-#hamburgerBtn{ 
-  display: block;
-  background: transparent;
-  font-size: 30px;
-  color: white;
-  border: none;
-  line-height: 80px;
-  margin-right: 40px;
-  float: right;
-  cursor: pointer;
-}
-.navbar ul{
-  display: none;
-}
-.navbar ul.open{
-  display: block;
-}
-#hamburgerBtn span:nth-child(1){
-  display: block;
-}
-#hamburgerBtn.open span:nth-child(1){
-  display: none;
-}
-
   .container {
     padding: 20px;
   }
@@ -608,4 +802,18 @@ footer p.text-center {
     align-items: none;
     overflow-x: scroll;
   }
+}
+@media only screen and (min-width: 65em) {
+  #hamburgerBtn {
+    display: none;
+  }
+  .navbar .toggle, .responsive .ßtoggle{
+		display: none;
+	}
+  .navbar .large-nav{
+    display: block;
+  }
+  .weather-header{
+  margin: 20px;
+}
 }

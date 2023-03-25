@@ -1,14 +1,25 @@
 <nav class="navbar">
-    <button id="hamburgerBtn"><span>&#9776;</span></button>
-      <ul class="toggle">
+   <div>
+      <ul class="large-nav">
         <li><a href="index.html">Home</a></li>
       <li><a href="interactive-weather-map.html">Weather Map</a></li>
-      <li><a href="#search">Search</a></li>
-      <li><a href="#future-forecast">Future Forecast</a></li>
+      <li><a href="wind-chill-calculator.html">Wind Chill Calculator</a></li>
+      <li><a href="about.html">About Us</a></li>
      
       <button id="open-modal" class="signUp">Sign Up for weather alert</button>
-      
+      </ul>
+      <button id="hamburgerBtn"><span>&#9776;</span><span>ⓧ</span></button>
+
+  </div>
+    <div class="toggle">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="interactive-weather-map.html">Weather Map</a></li>
+      <li><a href="wind-chill-calculator.html">Wind Chill Calculator</a></li>
+      <li><a href="about.html">About Us</a></li>
     </ul>
+    <!-- <button id="open-modal" class="signUp modality">Sign Up for weather alert</button> -->
+   </div>
   </nav>
   <!-- The Modal -->
 <div id="modal" class="modal">
@@ -84,6 +95,7 @@
       <div class="prevent-bot" aria-hidden="true"><input 
         type="text" 
         name="b_d577c42d22fcb4b54bd791ab3_97993a9e4e" 
+        placeholder="Leave this section blank it helps prevent bots from signing up"
         tabindex="-1" 
         value="">
       </div>
