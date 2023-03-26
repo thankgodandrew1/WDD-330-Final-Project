@@ -30,14 +30,14 @@
   background: url(../public/images/bg1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
   font-family: var(--font-headline);
 }
 .wind-chill-body {
   background: url(../public/images/bg4.jpg);
   background-repeat: repeat;
   background-size: cover;
-  /* height: 100vh; */
+  height: 100vh;
   font-family: var(--font-headline);
 }
 .privacy-body{
@@ -45,11 +45,13 @@
   background-repeat: repeat;
   background-size: cover;
   font-family: var(--font-headline);
+  /* height: 100vh; */
 }
 #about-body {
   font-family: var(--font-headline);
   font-size: 16px;
   line-height: 1.5;
+  height: 100%;
   margin: 0;
   padding: 0;
   background: url(../public/images/bg3.jpg);
@@ -162,7 +164,7 @@
   z-index: 1;
   margin: 3em auto;
   height: 80vh;
-  width: 70%;
+  width: 80%;
   box-shadow: 0 0 5px #ffa500;
 }
 .response {
@@ -395,7 +397,7 @@
   font-size: 16px;
   font-weight: bold;
   margin-right: 10px;
-  margin-left: 120px;
+  /* margin-left: 3px; */
 }
 
 #search-submit-btn {
@@ -497,7 +499,7 @@
 .weather-h1, .wind-chill-h1{
   color: white;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 40px;
   border-bottom: 2px solid whitesmoke;
   width: fit-content;
 }
@@ -723,8 +725,8 @@ footer p.text-center {
 	display: block;
 }
 @media only screen and (max-width: 768px) {
- body{
-   height: 150vh;
+ #main-body{
+   height: 200vh;
  }
  .snowflake {
   font-size: 1.2rem;
@@ -798,6 +800,24 @@ footer p.text-center {
   #search-submit-btn:hover {
     background-color: var(--primary-color);
   }
+  #map {
+    height: 50vh;
+  }
+  .weather-h1 {
+    text-align: center;
+  }
+  .wind-chill-calc-div {
+    width: 350px;
+  }
+  #about-body .about {
+    margin: 5px;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  .privacy-div {
+    margin: 15px;
+    margin-top: 50px;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
@@ -820,5 +840,8 @@ footer p.text-center {
   }
   .weather-header{
   margin: 20px;
+}
+#search-input {
+  margin-left: 160px;
 }
 }

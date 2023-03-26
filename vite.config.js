@@ -12,6 +12,7 @@ export default defineConfig({
         weatherMap: resolve(__dirname, 'src/interactive-weather-map.html'),
         windChillCalculator: resolve(__dirname, 'src/wind-chill-calculator.html'),
         aboutUs: resolve(__dirname, 'src/about.html'),
+        privacyPolicy: resolve(__dirname, 'src/privacy-policy.html'),
       },
     },
   },
