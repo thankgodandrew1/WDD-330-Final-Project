@@ -386,16 +386,16 @@
 }
 
 #search-input {
-  width: 370px;
+  width: 360px;
   padding: 10px;
   border: 2px solid var(--secondary-color);
   box-shadow: 0 0 5px var(--orange);
   border-radius: 4px;
   outline: 2px solid var(--secondary-color);
-  font-size: var(--font-base);
+  font-size: 16px;
   font-weight: bold;
   margin-right: 10px;
-  margin-left: 110px;
+  margin-left: 120px;
 }
 
 #search-submit-btn {
@@ -806,6 +806,7 @@ footer p.text-center {
     align-items: none;
     overflow-x: scroll;
   }
+  
 }
 @media only screen and (min-width: 55em) {
   #hamburgerBtn {
