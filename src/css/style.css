@@ -395,6 +395,7 @@
   font-size: var(--font-base);
   font-weight: bold;
   margin-right: 10px;
+  margin-left: 110px;
 }
 
 #search-submit-btn {
@@ -725,6 +726,9 @@ footer p.text-center {
  body{
    height: 150vh;
  }
+ .snowflake {
+  font-size: 1.2rem;
+ }
   .container {
     padding: 20px;
   }
@@ -803,7 +807,7 @@ footer p.text-center {
     overflow-x: scroll;
   }
 }
-@media only screen and (min-width: 65em) {
+@media only screen and (min-width: 55em) {
   #hamburgerBtn {
     display: none;
   }
