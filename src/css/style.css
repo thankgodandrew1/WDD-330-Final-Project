@@ -142,7 +142,6 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.4); /* Black background with opacity */
 }
-
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
@@ -818,7 +817,7 @@ input[type="file"] {
   text-align: center;
 }
 
-.community-main h3, h2 {
+.community-main h3, .community-main h2, .modal-content h2 {
   margin: 40px 0 20px;
   padding: 10px;
   text-align: center;
