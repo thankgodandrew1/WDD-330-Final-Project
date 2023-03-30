@@ -24,7 +24,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 120vh;
-  font-family: var(--font-headline);
+  font-family: var(--font-body);
 }
 #weather-body {
   background: url(../public/images/bg1.jpg);
