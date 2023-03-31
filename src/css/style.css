@@ -445,6 +445,7 @@
   background: rgb(0, 0, 139, .4);
   margin-top: 20px;
   padding: 30px;
+  font-weight: bold;
   /* position: fixed; */
   bottom: 0;
   display: flex;
@@ -484,13 +485,14 @@
 }
 
 .weather-forecast .weather-forecast-item {
+  font-family: var(--font-headline);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 10px 9px;
   border: 1px solid #eee;
-  padding: 15px;
+  padding: 18px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
 }
@@ -670,7 +672,7 @@ footer p.text-center {
 .toggle {
   margin: 35px auto;
 }
-.navbar .toggle li.active a{
+.navbar .toggle li a{
 	background-color: var(--primary-color);
 }
 

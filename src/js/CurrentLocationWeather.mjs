@@ -104,7 +104,7 @@ showWeatherData(data) {
         `;
 
 
-    let otherDayForcast = '';
+    let dailyForcast = '';
     data.daily.forEach((day, idx) => {
         if (idx == 0) {
         this.currentTempEl.innerHTML = `
@@ -121,7 +121,7 @@ showWeatherData(data) {
                 
                 `;
         } else {
-        otherDayForcast += `
+        dailyForcast += `
                 <div class="weather-forecast-item">
                     <div class="day">${window
                     .moment(day.dt * 1000)
@@ -161,6 +161,6 @@ showWeatherData(data) {
       shareBtnsContainer.appendChild(twitterBtn);
 
       this.currentWeatherItemsEl.appendChild(shareBtnsContainer);
-      this.weatherForecastEl.innerHTML = otherDayForcast;
+      this.weatherForecastEl.innerHTML = dailyForcast;
     }
 }
