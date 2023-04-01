@@ -18,6 +18,27 @@
   --small-font: 0.8em;
   --large-font: 1.2em;
 }
+/* Set the color of the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #FFD700;
+}
+::-moz-scrollbar-thumb {
+  background-color: #FFD700;
+}
+::-ms-thumb {
+  background-color: #FFD700;
+}
+
+/* Set the color of the track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: #FFA500;
+}
+::-moz-scrollbar-track {
+  background-color: #FFA500;
+}
+::-ms-track {
+  background-color: #FFA500;
+}
 
 #main-body {
   background: url(../public/images/bg2.jpg);
@@ -589,7 +610,8 @@
 
 /* Style for the footer container */
 footer {
-  background: linear-gradient(to right, #7bc0e0, #888);
+  background: linear-gradient(to bottom right, #FFD700, #FFA500);
+ 
   padding: 50px 0;
   font-weight: bold;
   width: 100%;
@@ -597,14 +619,14 @@ footer {
 
 /* Style for the headings in the footer */
 footer h4 {
-  color: #333;
+  color: #111;
   font-size: 20px;
   margin-bottom: 20px;
 }
 
 /* Style for the contact information in the footer */
 footer p {
-  color: #666;
+  color: #333;
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -612,16 +634,19 @@ footer p {
 
 /* Style for the links in the footer */
 footer ul li a {
-  color: #666;
+  color: #333;
   font-size: 16px;
   line-height: 1.5;
   text-decoration: none;
+}
+footer ul li {
+  padding: 5px;
 }
 footer .padding{
   padding: 10px;
 }
 footer .padding a{
-  color: #555;
+  color: #333;
   text-decoration: none;
   font-size: 15px;
   display: block;
@@ -648,20 +673,20 @@ footer .social li {
 }
 
 footer .social li a {
-  color: #666;
+  color: #555;
   font-size: 24px;
   line-height: 1;
   text-decoration: none;
 }
 
 footer .social li a:hover {
-  color: #333;
+  color: #111;
 }
 
 /* Style for the copyright text in the footer */
 footer p.text-center {
-  color: #666;
-  font-size: 14px;
+  color: #000;
+  font-size: 18px;
   margin-top: 30px;
 }
 .navbar .toggle{
@@ -920,16 +945,12 @@ input[type="file"] {
     margin-top: 50px;
   }
 }
-
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 55em) {
   .future-forecast {
     justify-content: start;
     align-items: none;
     overflow-x: scroll;
   }
-  
-}
-@media only screen and (min-width: 55em) {
   #hamburgerBtn {
     display: none;
   }
