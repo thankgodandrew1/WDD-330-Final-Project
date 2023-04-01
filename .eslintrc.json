@@ -24,7 +24,7 @@
         "props": false
       }
     ],
-    "console": 10,
+    "no-console": 0,
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "func-names": 0,
     "space-unary-ops": 2,

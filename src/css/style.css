@@ -78,7 +78,6 @@
 
   z-index: 1;
   overflow: hidden;
-  margin: 10px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -107,6 +106,7 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-weight: bold;
 } 
 .navbar .large-nav li a:hover{
   background: linear-gradient(to right, #00008b, #add8e6);
@@ -420,9 +420,9 @@
   font-weight: bold;
   cursor: pointer;
 }
-#search-submit-btn::before{
+/* #search-submit-btn::before{
   content: 'Search';
-}
+} */
 #search-submit-btn:hover {
   background-color: var(--primary-color);
 }
@@ -517,12 +517,12 @@
 }
 /* Styles for About page */
 #about-body main {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 #about-body .about {
-  background-color: rgb(255, 165, 0, .5);
+  background-color: rgb(253, 255, 245, .8);
   margin: 20px;
   padding: 30px;
 }
@@ -624,6 +624,8 @@ footer .padding a{
   color: #555;
   text-decoration: none;
   font-size: 15px;
+  display: block;
+  padding: 10px;
 }
 footer .padding a:hover{
   text-decoration: underline;
@@ -662,47 +664,39 @@ footer p.text-center {
   font-size: 14px;
   margin-top: 30px;
 }
-.navbar .toggle, .modality{
-	z-index: 10;
+.navbar .toggle{
 	width: 100%;
 	position: static;
 	font-family: var(--heading-font);
 	overflow: hidden;
 }
-.toggle {
-  margin: 35px auto;
-}
-.navbar .toggle li a{
-	background-color: var(--primary-color);
-}
 
-.navbar .toggle li a:hover {
-	background-color: var(--accent2-color);
-}
-.navbar .toggle li a{
-	background-color: var(--secondary-color);
-	color: var(--accent3-color);
-	border-top: 1px solid var(--accent3-color);
+.toggle {
+  margin-top: 48px;
 }
 .navbar .toggle {
 	display: none;
 }
-.navbar a{
+.navbar .toggle li {
+  line-height: 35px;
+  display: block;
+  border-top: 1px solid #03a9f4;
+}
+.navbar .toggle li a{
+  background: linear-gradient(to right, #79aee6, #2563eb);
 	display: block;
+  text-align: center;
 	padding: 0.95rem;
 	text-decoration: none;
 	font-weight: bold;
-	transition: 0.5s;
-	font-size: clamp(1rem, 2vmin, 1.5rem);
+	transition: ease-in-out 2s;
+	font-size: clamp(1rem, 20vmin, 1.5rem);
 }
-.navbar a:hover {
-  background: linear-gradient(to right, #00008b, #add8e6);
+.navbar .toggle li a:hover {
+  background: linear-gradient(to right, #5353df, #add8e6);
   color: black;
-  transition: all 2s;
+  transition: all -10s;
   font-weight: bold;
-}
-.toggle li a{
-  text-align: center;
 }
 .navbar .large-nav{
 	display: none;
@@ -738,8 +732,9 @@ footer p.text-center {
 }
 
 .community-main {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  margin-top: 2.1rem;
   padding: 20px;
 }
 
@@ -754,7 +749,6 @@ footer p.text-center {
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 .community input[type="text"],
 input[type="file"] {
   font-size: 16px;
@@ -762,11 +756,10 @@ input[type="file"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
-  width: 100%;
-  max-width: 500px;
+  width: 93%;
+  max-width: 800px;
   background: #f3f4f6;
   border-radius: 5px;
-
 }
 
 .community button[type="submit"] {
@@ -778,8 +771,16 @@ input[type="file"] {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+  width: 90%;
 
+}
+.community-form {
+  background-color: #ccc;
+  padding-bottom: 15px;
+  max-width: 900px;
+  margin: auto;
+  /* padding: 5px; */
+}
 .community button[type="submit"]:hover {
   background-color: #2563eb;
 }
@@ -789,13 +790,6 @@ input[type="file"] {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
 }
-
-/* #submissions div {
-  background-color: #f3f4f6;
-  border-radius: 5px;
-  overflow: hidden;
-} */
-
 #submissions h3 {
   font-size: 16px;
   font-weight: 600;
@@ -817,9 +811,11 @@ input[type="file"] {
   margin: 0;
   padding: 20px;
   text-align: center;
+  background-color: #f3f4f6;
 }
 
 .community-main h3, .community-main h2, .modal-content h2 {
+  font-family: var(--font-body);
   margin: 40px 0 20px;
   padding: 10px;
   text-align: center;
@@ -884,7 +880,7 @@ input[type="file"] {
   }
   
   #search-input {
-    width: 200px;
+    width: 190px;
     padding: 5px;
     border: 2px solid var(--secondary-color);
     outline: 1px solid var(--secondary-color);
@@ -896,12 +892,12 @@ input[type="file"] {
   #search-submit-btn {
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
   }
-  #search-submit-btn::before{
+  /* #search-submit-btn::before{
     content: '🔍';
-  }
+  } */
   #search-submit-btn:hover {
     background-color: var(--primary-color);
   }
@@ -937,7 +933,7 @@ input[type="file"] {
   #hamburgerBtn {
     display: none;
   }
-  .navbar .toggle, .responsive .ßtoggle{
+  .navbar .toggle, .ßtoggle{
 		display: none;
 	}
   .navbar .large-nav{
@@ -948,5 +944,8 @@ input[type="file"] {
 }
 #search-input {
   margin-left: 160px;
+}
+.community button[type="submit"] {
+  width: fit-content;
 }
 }
