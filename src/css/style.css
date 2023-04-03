@@ -123,7 +123,7 @@
   text-decoration: none;
   font-weight: bold;
   transition: ease-in-out 2s;
-  font-size: clamp(1rem, 5vmin, 1.5rem);
+  font-size: clamp(1rem, 4vmin, 1.5rem);
   color: black;
 }
 
@@ -239,10 +239,7 @@
   cursor: pointer;
 }
 
-* Starts newsletter signup styles */ .prevent-bot {
-  position: absolute;
-  left: -5000px;
-}
+* Starts newsletter signup styles */
 #map {
   z-index: 1;
   margin: 3em auto;
@@ -864,7 +861,7 @@ video {
 
   .future-forecast {
     justify-content: start;
-    align-items: none;
+    /* align-items: none; */
     overflow-y: scroll;
   }
 
@@ -949,7 +946,7 @@ video {
 @media only screen and (min-width: 55em) {
   .future-forecast {
     justify-content: start;
-    align-items: none;
+    /* align-items: none; */
     overflow-x: scroll;
   }
   /* Navbar styles */
