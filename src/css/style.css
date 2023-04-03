@@ -123,7 +123,7 @@
   text-decoration: none;
   font-weight: bold;
   transition: ease-in-out 2s;
-  font-size: clamp(1rem, 4vmin, 1.5rem);
+  font-size: clamp(1rem, 5.5vmin, 1.5rem);
   color: black;
 }
 
@@ -240,6 +240,9 @@
 }
 
 * Starts newsletter signup styles */
+.response {
+  display: none;
+}
 #map {
   z-index: 1;
   margin: 3em auto;
@@ -247,9 +250,7 @@
   width: 80%;
   box-shadow: 0 0 5px #ffa500;
 }
-.response {
-  display: none;
-}
+
 #mc_embed_signup {
   background: linear-gradient(to right, rgb(0, 0, 139, 0.4), #add8e6);
   padding: 20px;

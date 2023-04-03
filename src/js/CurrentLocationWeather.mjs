@@ -30,7 +30,7 @@ export default class CurrentLocationWeather {
         'Nov',
         'Dec',
       ];
-      this.API_KEY = 'b045804ab93431828b3e101e2be26dc1';
+      this.API_KEY = '49cc8c821cd2aff9af04c9f98c36eb74';
     }
   
     start() {
