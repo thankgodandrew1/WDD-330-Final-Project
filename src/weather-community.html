@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="ThankGod Andrew" >
-    <meta name="description"
-    content="WeatherSite Community Page WDD330: Web Frontend Development at Brigham Young University - Idaho" >
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="ThankGod Andrew" />
+    <meta
+      name="description"
+      content="WeatherSite Community Page WDD330: Web Frontend Development at Brigham Young University - Idaho"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Ubuntu:wght@300&display=swap"
       rel="stylesheet"
-    >
-   <link rel="stylesheet" href="css/style.css">
-   <script src="js/WeatherCommunity.mjs" type="module"></script>
-   <script src="https://kit.fontawesome.com/ebcf57f900.js" crossorigin="anonymous"></script>
-   <title>Community</title>
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/WeatherCommunity.mjs" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/ebcf57f900.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Community</title>
   </head>
   <body class="community-body">
     <header id="main-header" class="weather-header"></header>
     <main class="community-main">
-        <h1>Weather Community</h1>
-       <div class="community-form">
-        <h3>Please submit only photos or videos of weather events in your area, which i hope can create a sense 
-            of community around the site. Thank you!</h3>
-        
+      <h1>Weather Community</h1>
+      <div class="community-form">
+        <h3>
+          Please submit only photos or videos of weather events in your area,
+          which i hope can create a sense of community around the site. Thank
+          you!
+        </h3>
+
         <form id="community-form" class="community">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          
+          <input type="text" id="name" name="name" required />
+
           <label for="location">Location:</label>
-          <input type="text" id="location" name="location" required>
-          
+          <input type="text" id="location" name="location" required />
+
           <label for="file">File:</label>
-          <input type="file" id="file" name="file" accept="image/*,video/*">
-          
+          <input type="file" id="file" name="file" accept="image/*,video/*" />
+
           <button type="submit">Submit</button>
         </form>
-        </div>
-        <h2>Recent Submissions</h2>
-        
-        <div id="submissions">
-          <!-- This is where the submissions will appear -->
-        </div>
+      </div>
+      <h2>Recent Submissions</h2>
+
+      <div id="submissions">
+        <!-- This is where the submissions will appear -->
+      </div>
     </main>
     <footer id="main-footer"></footer>
-</body>
+  </body>
 </html>
