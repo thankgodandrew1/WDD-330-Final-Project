@@ -119,6 +119,7 @@
   padding-left: 10px;
 }
 .navbar .toggle li a {
+  display: block;
   text-decoration: none;
   font-weight: bold;
   transition: ease-in-out 2s;
@@ -149,7 +150,6 @@
 .navbar .toggle.open {
   display: block;
 }
-
 #hamburgerBtn span:nth-child(1) {
   display: block;
 }
